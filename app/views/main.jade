@@ -1,0 +1,73 @@
+doctype html
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+html(lang="en")
+    head
+        meta(http-equiv = 'Content-Type', content = 'text/html; charset=utf-8')
+        meta(http-equiv='X-UA-Compatible', content="IE=edge,chrome=1")
+        title
+            block title
+
+        link(rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png")
+        link(rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png")
+        link(rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png")
+        link(rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png")
+        link(rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png")
+        link(rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png")
+        link(rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png")
+        link(rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png")
+        link(rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png")
+        link(rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png")
+        link(rel="manifest" href="images/favicon/manifest.json")
+        meta(name="msapplication-TileColor" content="#ffffff")
+        meta(name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png")
+        meta(name="theme-color" content="#ffffff")
+
+        meta(name='viewport' content="width=device-width, initial-scale=1") 
+
+        link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700'  type='text/css')
+
+        // bower:css
+        // endbower
+
+        link(rel='stylesheet' type='text/css' href='css/style.css')
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    body
+        include partials/_load
+        
+        <!--[if lte IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://www.google.ru/chrome/browser/desktop/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        include partials/_header
+        //- include partials/_nav
+
+        block content
+
+        include partials/_footer
+        
+        
+        
+               
+        //- Сбор js ф-ов установленных bower в один - vendor.js
+        // build:js js/vendor.js
+        // bower:js
+        // endbower
+        // endbuild    
+          
+
+        //- Сбор js ф-ов в один - main.js
+        // build:js js/main.js
+        script(src='js/main.js')  
+        script(src='js/vendor/parallax.min.js')  
+        // endbuild

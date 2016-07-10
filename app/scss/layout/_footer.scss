@@ -1,0 +1,19 @@
+.page__footer  {
+	background: #222;
+	padding: 2px 0;
+	text-align: center;
+	font-size: .85rem;
+	color: #fff;
+
+	p {
+		margin: .85rem auto;
+	}
+
+	a {
+		color: #00bcc3;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

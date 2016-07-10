@@ -1,0 +1,65 @@
+.wrap {
+	margin: 0 auto;
+	max-width: 1200px;
+	width: 100%;
+	padding: 0 15px;
+}
+
+.input {
+	border: 1px solid #D8D8D8;
+    border-radius: 4px;
+    white-space: nowrap;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {    	
+	    border: 1px solid #727272;    	
+    }
+}
+
+.button {
+    background: transparent;
+    border: none;
+}
+
+.page__content {
+    background: #fff;
+    overflow: hidden;
+
+    .wrap {
+        position: relative;
+        padding: 0%;
+        height: 100%;
+        min-height: 500px;
+
+        @include responseTo(sm-xx) {
+            padding: 0 15px 0 38%;
+        }
+
+        @include responseTo(md) {
+            padding: 0 20% 0 28%;
+        }
+    }
+
+    &_left {        
+
+        @include responseTo(sm-xx) {
+            width: 38%;
+            margin: 0;
+            @include posotion(absolute, 1);
+            right: auto;
+        }
+
+        @include responseTo(md) {
+            width: 28%;
+        }
+    }
+
+    &_text {
+        padding: 0 15px;
+        @include responseTo(sm-xx) {
+            overflow: hidden;
+            margin: 0 auto;
+        }
+    }
+}

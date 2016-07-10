@@ -1,0 +1,15 @@
+.parallax__section {
+    min-height: 200px;
+    background: transparent;
+    position: relative;
+
+    &:after {
+    	content: '';
+    	@include posotion(absolute, 100);
+		background: rgba(0,0,0,.42);
+    }
+
+    @include responseTo(sm-xx) {
+        min-height: 400px;
+    }
+}

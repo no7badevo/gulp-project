@@ -1,0 +1,6 @@
+{
+  "name": "test-pj",
+  "dependencies": {
+    "jquery": "1.11"
+  }
+}

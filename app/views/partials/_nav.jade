@@ -1,0 +1,7 @@
+nav.nav
+	.wrap
+		- var items = ['Home', 'Blog', 'Contact']
+		ul.nav__list
+			each item in items
+				li(class="nav__item nav__item_" + ((item == "Home") ? 'active' : ''))
+					a(href="#").nav__link= item

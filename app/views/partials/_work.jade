@@ -1,0 +1,32 @@
+- var firstItem = {num: '01', dataClass: "work-1", link:'index.html', title:'UPD front-end сборка', deskription: 'Или как я в очередной раз собирала front-end.', texts: ['<a target="_blank" href="https://github.com/lime7/www">front-end сборка #1</a> 2015.', 'Актуальная <a target="_blank" href="https://github.com/lime7/www">UPD front-end сборка #2</a> 2016.']}
+
+- var workList = [firstItem, {num: '02', dataClass: "work-2", link:'https://lime7.github.io/jQlearn/', title:'Learn jquery', deskription: 'Базовые элементы web страницы', texts: ['Рабочие примеры табов, модальных окон, простой навигации, слайдера и слайдшоу изображений по урокам <a target="_blank" href="https://www.youtube.com/channel/UCIIt69f5D44s2cdb9vXQNzA">loftblog</a>.', 'Перейти к примерам: <a target="_blank" href="https://lime7.github.io/jQlearn/">link</a>.']},{num: '03', dataClass: "work-3", link:'https://lime7.github.io/lp-lime7/', title:'Lime7', deskription: 'Test Landing page', texts: ['<a target="_blank" href="https://lime7.github.io/lp-lime7/">Landing page. it group – lime7</a>', ' Тестовый проект. Выполнен с применением SASS Compass, Bootstrap 3.', 'Responsive, adaptive, собственный дизайн 2013.']},{num: '04', dataClass: "work-4", link:'http://lime7.github.io/uiKit/', title:'Ui Kit', deskription: 'Simple ui kit design', texts: ['Тестовый проект. UI Kit элементы выполненные с применением jquery плагинов. <a target="_blank" href="http://lime7.github.io/uiKit/">Ссылка на проект</a>.', 'Используемые плагины:  <ul> <li><span>jquery.maskedinput.min.js</span> - поле для ввода номера телефона</li><li><span>jquery.chosen.min.js</span> - кастомный select</li><li><span>jquery.form-validator.min.js</span> - валидация форм</li><li><span>slick.min.js</span> - slick slider</li><li><span>knob-min.js</span> - circle graph</li><li><span>jquery.mCustomScrollbar.concat.min.js</span> - кастомный скролл</li><li><span>autocomplete.js</span> - автокомплит</li><li><span>app.js</span> - виджет погоды</li><li><span>jquery.jplayer.min.js</span> - jplayer кастомные видео/аудио плееры</li><li><span>video.js</span> - jplayer кастомный видео плеер</li><li><span>zino.svg.min.js</span> - svg график</li><li><span>jquery-comments.min.js</span> - виджет комментариев</li><li><span>jquery.star-rating-svg.js</span> - star рейтинг</li></ul>']},{num: '05', dataClass: "work-5", link:'http://lime7.github.io/skelet/', title:'Walking skeleton', deskription: 'Episode 1', texts: ['<a target="_blank" href="http://lime7.github.io/skelet/">Codepen link</a>', 'Анимация идущего скелета с помощью одного лишь css3.']},{num: '06', dataClass: "work-6", link:'http://codepen.io/semenchenko/full/YWNKmG/', title:'Fish', deskription: '2d game only css', texts: ['<a target="_blank" href="http://codepen.io/semenchenko/full/YWNKmG/">Codepen link</a>', 'Задумка анимированной 2d игры средствами jade, css3 и svg.', 'Первый уровень. Нужно кликать по рыбкам, чтобы набрать баллы. Каждая пойманная рыбка приносит определенное количество баллов.', '<span>Основной принцип работы:</span>', 'Инициализация счетчика: <br/> <code>body { counter-reset: game; }</code> <i>* counter-reset применяется для родительского элемента </i>', 'Для хранения значения используется свойство <span>counter-increment: counterName counterIncrement;</span> с именем счетчика и значением. Наиболее подходящими для хранения данного значения являются флажки - <span>input:checkbox</span> с их глобальным атрибутом <span>:checked</span>.', '<code>#fish-1:checked { counter-increment: counterName 5; }</code>', 'Для отображения значения счетчика можно использовать псевдоэлемент <span>:after/:before</span>','<code>#fish-1:checked:after { content: "+5"}</code>']},{num: '07', dataClass: "work-7", link:'http://codepen.io/semenchenko/full/adxboN/', title:'3d cube', deskription: 'Only css', texts: ['<a target="_blank" href="http://codepen.io/semenchenko/full/adxboN/">Codepen link</a>', 'Инфографика навыков выполненная в виде анимированных 3d кубиков', '<img src="images/pic-2.png" />']}]
+
+mixin work-item(work)
+    li(class="work-content__item work-content__item_"+work.dataClass + ((work.num == '01') ? ' active': ' '))
+        .work-content__head
+            .inner
+                h3.work-content__title= work.title
+                p.work-content__deskription= work.deskription
+        .work-content__body
+            - each text in work.texts
+                p!= text
+.wrap-inner
+    .page__content_left
+        .work-control
+            .work-control__head
+                .inner
+                    h3.work-control__title Draft list
+            .work-control__content
+                .inner
+                    .work-control__body
+                        ul.work-control__list
+                            - each work, index in workList
+                                li(class="work-control__item " + ((work.num == '01') ? 'active': ' ') data-class= work.dataClass)
+                                    a(href= work.link).work-control__link
+                                        span.work-control__num= work.num
+                                        = work.title
+    .page__content_text 
+        ul.work-content__list
+            for work in workList
+                +work-item(work)

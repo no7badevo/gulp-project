@@ -1,0 +1,18 @@
+- var populars = [{srcPop: 'images/pic-1.png', linkPop: 'http://codepen.io/semenchenko/full/adxboN/', namePop: '3D CUBE', deskPop: 'Only css animation'}, {srcPop: 'images/pic-4.png', linkPop: 'http://codepen.io/semenchenko/full/adxboN/', namePop: 'Skeleton', deskPop: 'Only css animation'}]
+
+mixin popularitem(popular)
+	.popular__item
+		img(src=popular.srcPop)
+		a(href=popular.linkPop).popular__link
+			i(class="fa fa-link popular__icon" aria-hidden="true")
+			h5.popular__name= popular.namePop 
+			span.popular__desk= popular.deskPop 
+
+.work-content__head
+	.inner
+		h3.work-content__title Popular
+.popular__body
+	.popular__list
+		for popular in populars
+			+popularitem(popular)
+			

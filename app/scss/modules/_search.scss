@@ -1,0 +1,35 @@
+// Search form
+.search {	
+	&__form {
+		position: relative;
+	    vertical-align: top;
+
+		&-input {			
+			width: 100%;
+			margin: 0 auto;
+			height: 34px;
+			font-size: 15px;
+			padding: 2px 35px 2px 15px;
+			@include transition(border-color, .17s, ease-in-out);
+
+			@include responseTo(sm-xx) {
+			    width: 370px;
+			}
+		}
+
+		&-submit {
+			position: absolute;
+			width: 38px;
+			height: 32px;
+			right: 1px;
+			top: 1px;
+			z-index: 2;
+			outline: 0;
+			cursor: pointer;
+			border: 0;
+			background-size: auto;
+			opacity: .6;
+			@include transition(opacity, .17s, ease-out);
+		}
+	}	
+}

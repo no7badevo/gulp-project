@@ -1,0 +1,17 @@
+// Social link
+.social {
+	&__item {
+		display: inline-block;
+		vertical-align: middle;
+
+		padding: .32rem .5rem;
+	}
+
+	&__link {
+		color: #D8D8D8;
+
+		&:hover {
+			color: #727272;
+		}
+	}
+}

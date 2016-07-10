@@ -1,0 +1,83 @@
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #333;
+    z-index: 7777;
+    height: 100%;
+}
+#status {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 64px;
+    height: 64px;
+    margin: -32px 0 0 -32px;
+    padding: 0;
+}
+
+#loading-center {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#loading-center-absolute {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 50px;
+    width: 75px;
+    margin-top: -25px;
+    margin-left: -36px;
+    text-align: center;
+}
+
+.object {
+    width: 4px;
+    height: 34px;
+    margin-right: -2px;
+    background-color: #5DBBC1;
+    display: inline-block;
+    vertical-align: middle;
+            animation: animate 1s infinite;
+}
+
+.object:nth-child(2) {
+            animation-delay: .1s;
+}
+
+.object:nth-child(3) {
+            animation-delay: .2s;
+}
+
+.object:nth-child(4) {
+            animation-delay: .3s;
+}
+
+.object:nth-child(5) {
+            animation-delay: .4s;
+}
+
+.object:nth-child(6) {
+            animation-delay: .5s;
+}
+
+.object:nth-child(7) {
+            animation-delay: .6s;
+}
+
+@-webkit-keyframes animate {
+    50%{transform:scaleY(0)}
+}
+@-o-keyframes animate {
+    50%{transform:scaleY(0)}
+}
+@-moz-keyframes animate {
+    50%{transform:scaleY(0)}
+}
+@keyframes animate {
+    50%{transform:scaleY(0)}
+}

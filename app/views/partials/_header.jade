@@ -1,0 +1,24 @@
+//-  Header : Start 
+header.page-header
+    .wrap                   
+        
+        .page-header__logo
+            .logo
+                a(href="#")
+                    img(src="images/logo.png" alt="" class="logo__img")
+        
+        //- .page-header__search
+        //-     .search
+        //-         form.search__form
+        //-             input(type="search" name="" class="search__form-input input" placeholder="Search ...")
+        //-             button(type="submit" class="search__form-submit button")
+        //-                 i(class="fa fa-search" aria-hidden="true")
+        
+        .page-header__social
+            .social
+                - var icons = {'codepen':'http://codepen.io/semenchenko/', 'github':'https://github.com/lime7', 'behance':'https://www.behance.net/semenchenko'}
+                ul.social__list
+                    each val, key in icons
+                        li.social__item
+                            a(target="_blank" href=val).social__link
+                                i(class="fa fa-"+ key aria-hidden="true")

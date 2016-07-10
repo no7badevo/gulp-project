@@ -1,0 +1,29 @@
+.page-header {
+	background: #fff;
+	padding: 10px 0;
+	
+	&__logo {
+
+	}
+	
+
+	
+
+	&__social {
+		float: right;
+		margin: .5rem 0; 
+	}
+
+	@include responseTo(sm-xx) {
+	    height: 70px;
+
+	    &__logo {
+	    	float: left;	
+	    }
+
+	    &__search {
+	    	float: left;
+	        margin: .5rem 1rem .5rem 3.5rem;
+	    }
+	}
+}

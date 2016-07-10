@@ -1,0 +1,18 @@
+// • • • • • • • • •  T Y P O G R A P H Y  • • • • • • • •
+$font-stack: 'Roboto', sans-serif;
+
+$base-font-size: 1rem;
+$base-line-height: 1.5rem;
+
+html, body { 
+    -webkit-text-size-adjust: 100%;  /* Размер текста на тел. не изменяется (none | auto | % ) */
+     -moz-osx-font-smoothing: subpixel-antialiased; /* Рендеринг текста ( subpixel-antialiased | antialiased | none ) */
+      -webkit-font-smoothing: subpixel-antialiased; 
+}
+
+body {
+	font-family: $font-stack;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    font-weight: normal;
+}

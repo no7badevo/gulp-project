@@ -1,0 +1,12 @@
+@mixin transition($property, $duration, $function) {
+	transition: $property $duration $function;
+}
+
+@mixin posotion($position, $z){
+	position: $position;
+	z-index: $z;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+}

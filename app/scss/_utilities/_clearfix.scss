@@ -1,0 +1,16 @@
+// • • • • • • • • • •   C  L  E  A  R  F  I  X   • • • • • • • • • •
+@mixin clearfix {
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  * html & { height: 1px }
+}
+
+.wrap,
+.row {
+	@include clearfix;
+}

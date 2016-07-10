@@ -1,0 +1,15 @@
+extends views/main
+
+
+block title
+	| Главная страница
+
+block content
+	include views/partials/_intro
+	
+	.page__content
+		.wrap
+			main.main__content
+				include views/partials/_work
+			aside.page__sidebar
+				include views/partials/_popular
